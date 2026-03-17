@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>API Tool</title>
+</head>
+
+<body style="font-family: Arial; margin: 40px;">
+
+<h2>Internal API Testing Tool</h2>
+
+<form action="/callapi" method="post">
+
+    <label>URL:</label><br>
+    <input type="text" name="url"
+           style="width:500px; height:30px;"
+           placeholder="http://localhost:8080/students/1" /><br><br>
+
+    <label>Method:</label><br>
+    <select name="method">
+        <option>GET</option>
+        <option>POST</option>
+        <option>PUT</option>
+        <option>DELETE</option>
+    </select><br><br>
+
+    <label>JSON Body:</label><br>
+    <textarea name="body" rows="6" cols="70"
+              placeholder='{"name":"Test","age":22}'></textarea><br><br>
+
+    <button type="submit">Send Request</button>
+</form>
+
+<hr>
+
+<h3>Response:</h3>
+<pre th:text="${response}"></pre>
+
+</body>
+</html>
