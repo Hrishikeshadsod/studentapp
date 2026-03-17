@@ -1,0 +1,11 @@
+# Ignore local configs
+application-local.properties
+
+# Ignore node modules
+node_modules/
+
+# Ignore build files
+target/
+
+# Ignore logs
+*.log
