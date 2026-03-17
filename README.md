@@ -1,64 +1,73 @@
 # Student Management System (Full Stack)
 
-A full-stack web application to manage student records with CRUD operations, built using Spring Boot, MySQL, and React. The project also includes a custom-built API testing tool for backend debugging.
+A full-stack web application for managing student records with complete CRUD functionality. Built using Spring Boot, MySQL, and React, and includes a custom API testing tool for backend debugging.
+
+---
+
+## Screenshots
+
+### Student Management UI
+
+![Student List](screenshots/home.png)
+
+### Add Student Form
+
+![Add Student](screenshots/add-student.png)
+
+### API Testing Tool
+
+![API Tool](screenshots/api-tool.png)
+
+### API Response
+
+![API Response](screenshots/api-response.png)
 
 ---
 
 ## Features
 
-* Add, Update, Delete Students
-* View all students
-* REST API with full CRUD support
-* MySQL database integration
-* React frontend (interactive UI)
-* Custom API Testing Tool (Thymeleaf-based)
+* Create, update, delete, and view student records
+* RESTful API with full CRUD operations
+* MySQL database integration using JPA/Hibernate
+* React-based frontend with interactive UI
+* Custom-built API testing tool (similar to Postman)
 * Input validation and error handling
 
 ---
 
 ## Tech Stack
 
-**Backend:**
+**Backend**
 
 * Java
 * Spring Boot
 * Spring Data JPA
 * Hibernate
 
-**Frontend:**
+**Frontend**
 
 * React.js
 * Bootstrap
 
-**Database:**
+**Database**
 
 * MySQL
 
-**Tools:**
+**Tools**
 
-* Git & GitHub
+* Git, GitHub
 * Eclipse IDE
 
 ---
 
 ## Project Structure
 
-```
 studentapp/
- ├── src/main/java/com/example
- │    ├── StudentRestController.java
- │    ├── ApiToolController.java
- │    ├── Student.java
- │    ├── StudentRepository.java
- │
- ├── src/main/resources
- │    ├── templates/
- │    │    └── apitool.html
- │    ├── application.properties
- │
- ├── .gitignore
- ├── pom.xml
-```
+├── src/main/java/com/example
+├── src/main/resources/templates
+├── screenshots/
+├── .gitignore
+├── pom.xml
 
 ---
 
@@ -66,41 +75,29 @@ studentapp/
 
 ### 1. Clone the repository
 
-```
 git clone https://github.com/Hrishikeshadsod/studentapp.git
 cd studentapp
-```
 
 ---
 
-### 2. Setup MySQL
+### 2. Configure database
 
-```
 CREATE DATABASE studentdb;
-```
 
-Update `application.properties`:
+Update application.properties:
 
-```
 spring.datasource.username=root
 spring.datasource.password=yourpassword
-```
 
 ---
 
 ### 3. Run the application
 
-From Eclipse:
-
-```
+Using Eclipse:
 Run As → Java Application
-```
 
-OR using terminal:
-
-```
+Using terminal:
 ./mvnw spring-boot:run
-```
 
 ---
 
@@ -117,42 +114,25 @@ OR using terminal:
 
 ## API Testing Tool
 
-Access the internal tool at:
-
-```
 http://localhost:8080/apitool
-```
-
-Features:
-
-* Send GET, POST, PUT, DELETE requests
-* Provide JSON body
-* View API responses instantly
 
 ---
 
-## Security Note
+## Security
 
-* Sensitive data like database passwords are excluded using `.gitignore`
-* Git history cleaned to remove credentials
+Sensitive configuration files are excluded using .gitignore.
 
 ---
 
-## Future Improvements
+## Future Enhancements
 
 * Add authentication (Spring Security + JWT)
 * Pagination and search
-* Deploy to cloud (Render / Railway)
-* Improve UI design
+* Deploy to cloud
+* Improve UI
 
 ---
 
 ## Author
 
 Hrishikesh Adsod
-
----
-
-## If you like this project
-
-Consider giving it a star on GitHub.
